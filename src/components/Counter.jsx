@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 class Counter extends Component {
   state = {
-    count: 0
+    count: this.props.value
     // imageUrl: "https://picsum.photos/200",
 
     // tags: ["Tag1", "Tag2", "Tag3"]
@@ -23,6 +23,7 @@ class Counter extends Component {
     this.setState({ count: this.state.count + 1 });
   };
   render() {
+    console.log("Props" + this.props);
     return (
       <div>
         {/* <img src={this.state.imageUrl} /> */}
